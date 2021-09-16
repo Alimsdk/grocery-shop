@@ -7,62 +7,447 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ogani Fruits</title>
     <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link nav-menu-link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- fontawesome cdn -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    <link nav-menu-link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap"
+    <link nav-menu-link rel="preconnect" href="https://fonts.googleapis.com">
+    <link nav-menu-link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link nav-menu-link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <!-- css styles -->
-    <link rel="stylesheet" href="style/style.css">
+    <link nav-menu-link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
     <header>
         <section id="top-section">
             <div class="top-header-part d-flex justify-content-between align-items-center">
-                <div style="border: 2px solid red" ;
-                    class="d-flex justify-content-evenly align-items-center top-left-header">
-
-                    <div> <i class="fas fa-envelope"></i>
+                <div class="d-flex justify-content-evenly align-items-center top-left-header">
+                    <div class="d-flex align-items-center ">
+                        <i class="fas fa-envelope"></i>
                         <a class="ps-1" style="font-size: 18px;" href="#">Hello@ogani.com</a>
                     </div>
-                    <p>Free Shipping for all Order of $99</p>
-
+                    <div>
+                        <a href="#">Free Shipping for all Order of $99</a>
+                    </div>
                 </div>
-                <div style="border: 2px solid red" ; class=" d-flex justify-content-evenly align-items-center
-                    top-right-header">
+                <div class="d-flex justify-content-evenly align-items-center top-right-header">
                     <div id="social-icons">
                         <i class="fab fa-facebook-f"></i>
                         <i class="fab fa-twitter"></i>
                         <i class="fab fa-instagram"></i>
                         <i class="fab fa-pinterest"></i>
                     </div>
-                    <div>
+                    <div class="icon-customization">
                         <li><i class="fas fa-flag-usa"></i>
                             <a href="#">English</a>
                             <i class="fas fa-caret-down"></i>
                         </li>
                     </div>
-                    <div>
-                        <a href="#" class="d-flex">
-                            <i class="fas fa-user"></i>
-                            <p>Login</p>
-                        </a>
+                    <div class="icon-customization">
+
+                        <i class="fas fa-user"></i>
+                        <a href="#">Login</a>
+
                     </div>
                 </div>
             </div>
         </section>
+        <section id="navigation" class="d-flex justify-content-between">
+            <div class="ps-4 m-3">
+                <a class="navbar-brand" href="#">
+                    <img src="data:image/webp;base64,UklGRpgDAABXRUJQVlA4TIwDAAAvdkAMEO/BJpJkK72vXvT4ZqS4w78Aam04jiRJarJ3X/C6wSD8N0lqto0kSak5fjws8o+QCI5hE9m2E36dOGS6bAJrWKJCBH0SkBQ86JkfCJ731Wu9DYoxhk1iYOGSWLi2AMTIUCbp2vbvvU4Zlu97fkrCV1AqChChRlVJEpY17VzODKoiVZlcTPof1Zj/kOHNnMe9fc+x9IOw1RQzNUVBYaC8NAIVKIrgiYj6/3UEbdu22tjRVkQIwcY5lHHsfHMOpv//w84phDxab/0Q0f8JQOGPP35D8ck1dvJ7Sp+/Fpw/57Od+JFSSh+/Kye3OeebPUnpDYCr55xzft6JL1p6i5usn+/Du5TSp5RS+vPpyOU+fEopfTyklNK/Oef7nPPVPiT5TvyVc77bj4NySCm9vs93jznni314LdLrlNL7+6ernHM+2Yfvyivl+mfO+RE7eRCvDym9ur7OOeeLvfhdvH+f0t+XOef8gN38Jl6l9xc55/xwuh/4fkjpx4d/cs755hQ72VtHki9edqfnl+enKO8nF0hycaZvyhaqfRHVqcSQpFMMZVdiAgt9h/LGBBa7okjdVmD8JdqFK21R57mybDoSaiy/QgxcbQsGri7zR9hXoNmuWVhxOjLwuHPOrYokGYStEdrNLNWlB9CaoLBT2qC5HmrTT7ZkErMINei26qha6DEoTnFUB1QOohMcarDfyCoLjvcKI4CO6oDKPUl6ODGvCSI021DtCuAUA8AqM2pbMWEUbFZMgSTtJp2yoHRQHICgxGpBdGiVYYUZBbstjDIVRSUAkdKj9kCSAYAX8xo44beYlLEICoFOcQpLj8zCApgEmzVR0GzglK6OUUythnIAEJVhDYxg/O8ZlAYAgnCr4IWrNyvDFraWEzOkFWxXdYJjNaOYolbxQKc4xUhf0lKOSq+MqzCJ0NQalKVoUGYgKmyE6kpGpXxZ1wSSnGu1CmOJU0YAQTF1lgpsV6EXdJWwKK6gp9oAsEpoa7SsOa7DLNQag0J7JAbFAkBUuLQVpipLhTZsgUWh6wG0hmpoBazCYFrRLgVe6Y57wXYdxk1iUFYOUBuvkPTOeeoAIuWM45MyVYDbAl2FAUdjOFIMYFLGgqj4GnETxLAiDChs3boAIChtAbxgrACzCRpbZFuUD74smAboKReUWmWq0fhNgGacPUnvxhbro3FeLM50kFYxRb3ia6Db6H8TAQ=="
+                        alt="logo">
+                </a>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link nav-menu-link active" aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-menu-link" href="#">SHOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-menu-link" href="#">PAGES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-menu-link" href="#">BLOGS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-menu-link" href="#">CONTACT</a>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <div id="shop-icons" class="d-flex justify-content-between align-items-center me-4" style="width: 15vw;">
+                <i class="fas fa-heart"></i>
+
+                <i class="fas fa-shopping-bag position-relative">
+                    <span style="z-index: -1;" id="no"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">9</span>
+                </i>
+                <a href="#">Item: <span id="cart-price">150</span> </a>
+            </div>
+        </section>
     </header>
+    <main>
+        <section>
+            <div class="container" id="search-area">
+                <div class="row mt-5">
+
+                    <div class="col-lg-8">
+                        <div class="search-box">
+                            <input type="text" placeholder="What do you need?">
+                            <button class="search-btn">Search</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ms-lg-5 ms-md-3 ">
+                        <div class="d-flex">
+                            <div>
+                                <i style="font-size: 35px;padding-right:15px;padding-top: 10px;"
+                                    class="fas fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h5>+65 11 23 987</h5>
+                                <p>support 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="container">
+            <div id="banner" class="d-flex align-items-center ps-5">
+                <div>
+                    <h5>FRUIT FRESH</h5>
+                    <h1>Vegetable 100% <span id="organic">Organic</span></h1>
+                    <p class="pt-1">Free <span id="pick">Pickup & Delivery</span> Available!</p>
+                    <button class="search-btn">Shop Now</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row product-slider">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-1.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-2.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-3.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-4.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row product-slider">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-2.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-4.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-1.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-3.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row product-slider">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-5.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-4.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-3.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="px-3 py-2 m-auto text-center">
+                                    <img src="https://preview.colorlib.com/theme/ogani/img/categories/cat-2.jpg.webp"
+                                        alt="">
+                                    <h2>Fresh Meat</h2>
+                                    <p>Price:500TK/kg</p>
+                                    <button class="search-btn ">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span aria-hidden="true">
+                        <i style="font-size: 40px;" class="fas fa-chevron-left text-success me-lg-5"></i>
+                    </span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span aria-hidden="true">
+                        <i style="font-size: 40px;" class="fas fa-chevron-right text-success ms-lg-5"></i>
+                    </span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5" id="feature-products">
+                <h2 class="text-center" id="feature-product-heading">Featured Product</h2>
+                <div class="categories d-flex justify-content-center mt-4">
+                    <a id="all-section" style="border-bottom: 3px solid green;" class="ms-5"
+                        href="#product-categories">All</a>
+                    <a id="orange-section" class="ms-5" href="#product-categories">Oranges</a>
+                    <a id="meat-section" class="ms-5" href="#product-categories">Fresh Meat</a>
+                    <a id="vegetable-section" class="ms-5" href="#product-categories">Vegetables</a>
+                    <a id="fastfood-section" class="ms-5" href="#product-categories">Fastfood</a>
+                </div>
+                <div class="row mt-5" id="product-categories">
+                    <div class="col-lg-3 py-2  all orange fresh-meat">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-1.jpg.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 py-2 all vegetable fastfood">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-2.jpg.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 py-2 all fresh-meat vegetable">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-3.jpg.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 py-2  all orange fastfood">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-4.jpg.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 py-2 all fresh-meat vegetable">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-5.jpg.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 py-2 all orange fastfood">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-6.jpg.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 py-2 all fresh-meat vegetable">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-7.jpg.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 py-2 all fastfood">
+                        <img src="https://preview.colorlib.com/theme/ogani/img/featured/feature-8.jpg.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container mt-5">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <a href="#">
+                        <img style="padding: 0 10px;"
+                            src="https://preview.colorlib.com/theme/ogani/img/banner/xbanner-1.jpg.pagespeed.ic.aDN3QrExt6.webp"
+                            alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img style="padding: 0 10px;"
+                            src="https://preview.colorlib.com/theme/ogani/img/banner/xbanner-2.jpg.pagespeed.ic.-2eeuFVLcY.webp"
+                            alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="mt-5 container">
+            <div>
+                <h2 class="text-center" id="feature-product-heading">Our Top Blogs</h2>
+                <div class="d-flex justify-content-around">
+                    <div class="blog">
+                        <div>
+                            <img src="https://preview.colorlib.com/theme/ogani/img/blog/xblog-1.jpg.pagespeed.ic.b6c8D8etPg.webp"
+                                alt="">
+                        </div>
+                        <div class="d-flex px-3 py-1">
+                            <div class="d-flex">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="blog-date"> May 5, 1992</span>
+                            </div>
+                            <div class="ms-3">
+                                <i class="far fa-comment"></i>
+                                5
+
+                            </div>
+
+                        </div>
+                        <div class="px-3 py-2">
+                            <a style="color: rgb(53, 53, 53);font-size: 18px;" href="#">Cooking tips make cooking
+                                simple</a>
+                            <p style="font-size: 14px;padding-top: 5px;" class="text-muted">Sed quia non numquam modi
+                                tempora indunt ut
+                                labore et dolore magnam
+                                aliquam quaerat
+                            </p>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="blog">
+                        <div>
+                            <img src="https://preview.colorlib.com/theme/ogani/img/blog/xblog-2.jpg.pagespeed.ic.Wv9OXwE7iA.webp"
+                                alt="">
+                        </div>
+                        <div class="d-flex px-3 py-1">
+                            <div class="d-flex">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="blog-date"> May 5, 1992</span>
+                            </div>
+                            <div class="ms-3">
+                                <i class="far fa-comment"></i>
+                                5
+
+                            </div>
+
+                        </div>
+                        <div class="px-3 py-2">
+                            <a style="color: rgb(53, 53, 53);font-size: 18px;" href="#">Cooking tips make cooking
+                                simple</a>
+                            <p style="font-size: 14px;padding-top: 5px;" class="text-muted">Sed quia non numquam modi
+                                tempora indunt ut
+                                labore et dolore magnam
+                                aliquam quaerat
+                            </p>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="blog">
+                        <div>
+                            <img src="https://preview.colorlib.com/theme/ogani/img/blog/xblog-3.jpg.pagespeed.ic.ruf-U0Iaxk.webp"
+                                alt="">
+                        </div>
+                        <div class="d-flex px-3 py-1">
+                            <div class="d-flex">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="blog-date"> May 5, 1992</span>
+                            </div>
+                            <div class="ms-3">
+                                <i class="far fa-comment"></i>
+                                5
+
+                            </div>
+
+                        </div>
+                        <div class="px-3 py-2">
+                            <a style="color: rgb(53, 53, 53);font-size: 18px;" href="#">Cooking tips make cooking
+                                simple</a>
+                            <p style="font-size: 14px;padding-top: 5px;" class="text-muted">Sed quia non numquam modi
+                                tempora indunt ut
+                                labore et dolore magnam
+                                aliquam quaerat
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
